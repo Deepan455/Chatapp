@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript">
+        let counter=0;
+        function hello() {
+          alert('hello!');
+          document.querySelector('h1').innerHTML = "Goodbye!";
+        }
+
+        function count(){
+          counter++;
+          document.querySelector('#counter').innerHTML=counter;
+          if (counter % 5 === 0){
+            alert(`Counter is at ${counter}!`);
+          }
+        }
+    </script>
+    <meta charset="utf-8">
+    <title>Practice</title>
+  </head>
+  <body>
+    <h1>counter</h1>
+    <h2 id="counter">0</h2>
+    <button onclick="count()">Click here </button>
+  </body>
+</html>

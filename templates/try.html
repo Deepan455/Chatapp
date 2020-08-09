@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src="{{ url_for('static',filename='response.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="..static/master">
+    <title>GanthanManthan</title>
+  </head>
+  <body>
+    <h1 id="noti"></h1>
+    <h1 id="noti2"></h1>
+    <center><h1>Chatter Box</h1></center>
+    <div id="chatbox">
+      <div id="scroll">
+      </div>
+      <div id="type">
+        <form id="messagen">
+          <input type="text" id="takein">
+          <input type="submit" id="submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

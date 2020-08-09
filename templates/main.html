@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}
+  The Front Page
+{% endblock %}
+{% block head %}
+
+{% endblock %}
+{% block content %}
+  <p id="test"></p>
+  <hr>
+  <div id="chtest"></div>
+  <center><h1 id="active_channel">{{log["chh"]}}</h1></center>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-lg-3 col-sm-10" id="channels">
+        {% if channels %}
+          {% for channel in channels %}
+            <center><div><a href="/channel/{{channel}}" class="rooms" data-chan="{{channel}}">{{channel}}</a></div><center>
+          {% endfor %}
+        {% endif %}
+        <a href="{{ url_for('create') }}">
+          <svg id="add" viewBox="0 0 20 20">
+  							<path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+  				</svg>
+        </a>
+    </div>
+    <div id="chatbox" class="col-lg-9 col-sm-12">
+      <div id="scroll">
+      </div>
+
+      <div id="type">
+        <form id="messagen" onsubmit="return false">
+          <input type="text" id="takein">
+          <button type="button" id="submit">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
